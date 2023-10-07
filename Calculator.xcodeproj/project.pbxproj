@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C6A665C2ACF5BA000CF8A9B /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6A665B2ACF5BA000CF8A9B /* ButtonView.swift */; };
 		4CAA022F2ACC0E7A00AE7B26 /* CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA022E2ACC0E7A00AE7B26 /* CalculatorApp.swift */; };
 		4CAA02312ACC0E7A00AE7B26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA02302ACC0E7A00AE7B26 /* ContentView.swift */; };
 		4CAA02332ACC0E7D00AE7B26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CAA02322ACC0E7D00AE7B26 /* Assets.xcassets */; };
@@ -14,6 +15,8 @@
 		4CAA02402ACC0E7D00AE7B26 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA023F2ACC0E7D00AE7B26 /* CalculatorTests.swift */; };
 		4CAA024A2ACC0E7D00AE7B26 /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA02492ACC0E7D00AE7B26 /* CalculatorUITests.swift */; };
 		4CAA024C2ACC0E7D00AE7B26 /* CalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA024B2ACC0E7D00AE7B26 /* CalculatorUITestsLaunchTests.swift */; };
+		4CC57AB52AD179B200E41768 /* OperationButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC57AB42AD179B200E41768 /* OperationButtonView.swift */; };
+		4CC57AB72AD17A0900E41768 /* NumberButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC57AB62AD17A0900E41768 /* NumberButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C6A665B2ACF5BA000CF8A9B /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		4CAA022B2ACC0E7A00AE7B26 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CAA022E2ACC0E7A00AE7B26 /* CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorApp.swift; sourceTree = "<group>"; };
 		4CAA02302ACC0E7A00AE7B26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +48,8 @@
 		4CAA02452ACC0E7D00AE7B26 /* CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CAA02492ACC0E7D00AE7B26 /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
 		4CAA024B2ACC0E7D00AE7B26 /* CalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4CC57AB42AD179B200E41768 /* OperationButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationButtonView.swift; sourceTree = "<group>"; };
+		4CC57AB62AD17A0900E41768 /* NumberButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,9 @@
 				4CAA02302ACC0E7A00AE7B26 /* ContentView.swift */,
 				4CAA02322ACC0E7D00AE7B26 /* Assets.xcassets */,
 				4CAA02342ACC0E7D00AE7B26 /* Preview Content */,
+				4C6A665B2ACF5BA000CF8A9B /* ButtonView.swift */,
+				4CC57AB42AD179B200E41768 /* OperationButtonView.swift */,
+				4CC57AB62AD17A0900E41768 /* NumberButtonView.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -257,8 +266,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CC57AB52AD179B200E41768 /* OperationButtonView.swift in Sources */,
 				4CAA02312ACC0E7A00AE7B26 /* ContentView.swift in Sources */,
 				4CAA022F2ACC0E7A00AE7B26 /* CalculatorApp.swift in Sources */,
+				4CC57AB72AD17A0900E41768 /* NumberButtonView.swift in Sources */,
+				4C6A665C2ACF5BA000CF8A9B /* ButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
