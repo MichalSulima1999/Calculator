@@ -32,5 +32,42 @@ final class CalculatorTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testPositiveScenarioForAddCalculation() {
+        XCTAssert(Calculations.add(5, 5) == 10)
+    }
 
+    func testNegativeScenarioForAddCalculation() {
+        XCTAssertNil(Calculations.add(nil, nil))
+    }
+    
+    func testPositiveScenarioForSubCalculation() {
+        XCTAssert(Calculations.subtract(5, 5) == 0)
+    }
+
+    func testNegativeScenarioForSubCalculation() {
+        XCTAssertNil(Calculations.subtract(nil, nil))
+    }
+
+    func testPositiveScenarioForProdCalculation() {
+        XCTAssert(Calculations.multiply(5, 5) == 25)
+    }
+
+    func testNegativeScenarioForProdCalculation() {
+        XCTAssertNil(Calculations.multiply(nil, nil))
+    }
+    
+    func testPositiveScenarioForDivCalculation() {
+        XCTAssert(Calculations.divide(5, 5) == 1)
+    }
+
+    func testZeroScenarioForDivCalculation() {
+        XCTAssertTrue(Calculations.divide(4, 0)!.isNaN)
+    }
+
+    func testPositiveScenarioForSinCalculation() {
+        let actual = String(format: "%.2f", Calculations.calculateSin(1)!)
+        let expected = "0.84"
+        XCTAssert(actual == expected)
+    }
 }

@@ -18,19 +18,28 @@ enum Operation {
 }
 
 struct Calculations {
-    static func add(_ a: Int, _ b: Int) -> Int {
-        return a + b
+    static func add(_ a: Int?, _ b: Int?) -> Int? {
+        if (a == nil || b == nil) {
+            return nil
+        }
+        return a! + b!
     }
     
-    static func subtract(_ a: Int, _ b: Int) -> Int {
-        return a - b
+    static func subtract(_ a: Int?, _ b: Int?) -> Int? {
+        if (a == nil || b == nil) {
+            return nil
+        }
+        return a! - b!
     }
     
-    static func multiply(_ a: Int, _ b: Int) -> Int {
-        return a * b
+    static func multiply(_ a: Int?, _ b: Int?) -> Int? {
+        if (a == nil || b == nil) {
+            return nil
+        }
+        return a! * b!
     }
     
-    static func divide(_ a: Int, _ b: Int) -> Double {
+    static func divide(_ a: Int, _ b: Int) -> Double? {
         if b == 0 {
             return Double.nan
         } else {
@@ -38,7 +47,7 @@ struct Calculations {
         }
     }
     
-    static func calculateSin(_ a: Int) -> Double {
+    static func calculateSin(_ a: Int) -> Double? {
         return sin(Double(a))
     }
 }
@@ -127,32 +136,32 @@ struct ContentView: View {
             break
         case .add:
             if ((number1 != nil) && (number2 != nil)) {
-                inputText = "Result: \(Calculations.add(number1!, number2!))"
+                inputText = "Result: \(Calculations.add(number1!, number2!)!)"
             } else {
                 showAlert(title: "Choose numbers", message: "Choose numbers")
             }
             break
         case .subtract:
             if ((number1 != nil) && (number2 != nil)) {
-                inputText = "Result: \(Calculations.subtract(number1!, number2!))"
+                inputText = "Result: \(Calculations.subtract(number1!, number2!)!)"
             } else {
                 showAlert(title: "Choose numbers", message: "Choose numbers")
             }
             break
         case .multiply:
             if ((number1 != nil) && (number2 != nil)) {
-                inputText = "Result: \(Calculations.multiply(number1!, number2!))"
+                inputText = "Result: \(Calculations.multiply(number1!, number2!)!)"
             } else {
                 showAlert(title: "Choose numbers", message: "Choose numbers")
             }
             break
         case .divide:
             if ((number1 != nil) && (number2 != nil)) {
-                let result = Calculations.divide(number1!, number2!)
+                let result = Calculations.divide(number1!, number2!)!
                 if (result.isNaN) {
                     showAlert(title: "Division by 0", message: "Cannot divide by 0")
                 } else {
-                    inputText = "Result: \(Calculations.divide(number1!, number2!))"
+                    inputText = "Result: \(Calculations.divide(number1!, number2!)!)"
                 }
             } else {
                 showAlert(title: "Choose numbers", message: "Choose numbers")
@@ -160,7 +169,7 @@ struct ContentView: View {
             break
         case .sin:
             if ((number1 != nil)) {
-                inputText = "Result: \(Calculations.calculateSin(number1!))"
+                inputText = "Result: \(Calculations.calculateSin(number1!)!)"
             } else {
                 showAlert(title: "Choose number", message: "Choose number")
             }
